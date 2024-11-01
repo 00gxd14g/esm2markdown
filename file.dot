@@ -1,0 +1,7 @@
+strict digraph  {
+trigger_1 [label=AND, shape=plaintext];
+"Rule 1" [color=orange, fillcolor=orange, shape=box, style=filled];
+"Rule 2" [color=orange, fillcolor=orange, shape=box, style=filled];
+trigger_1 -> "Rule 1";
+trigger_1 -> "Rule 2";
+}
