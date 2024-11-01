@@ -38,7 +38,7 @@
      ```python
      brew install graphviz
      ```
-
+   
 ### Betiği Çalıştırma
 
 1. **Betiği İndirin veya Kopyalayın:**
@@ -51,3 +51,26 @@
    ```python
    python esm2markdown.py <kural_xml_dosyası> <çıkış_dosyası>
    ```
+
+## Betiğin Çalışma Mantığı
+
+### Konfigürasyon Okuma:
+- Betik, varsayılan ayarları `esm2markdown.ini` dosyasından okuyabilir. Eğer bu dosya yoksa, varsayılan değerleri kullanır.
+- **Ayarlar:**
+  - `key_style`: Anahtar kelimelerin stilini belirler (örn. kalın yazı).
+  - `value_style`: Değerlerin stilini belirler.
+  - `sort_rules`: Kuralların alfabetik olarak sıralanıp sıralanmayacağını belirler.
+  - `toc`: İçindekiler tablosunun eklenip eklenmeyeceğini belirler.
+  - `imagepath`: Oluşturulan resimlerin kaydedileceği dizin.
+
+### XML Dosyasını İşleme:
+- Betik, XML dosyasını analiz eder ve korelasyon kurallarını çıkarır.
+- Kurallar ve ilgili bilgiler Markdown formatında yapılandırılır.
+
+### Diyagramların Oluşturulması:
+- Eğer gerekli kütüphaneler ve Graphviz kurulmuşsa, betik korelasyon kurallarının ilişkilerini gösteren diyagramlar oluşturur.
+- Diyagramlar `imagepath` değişkeninde belirtilen dizine kaydedilir.
+
+### Markdown Dosyasının Oluşturulması:
+- Betik, işlediği verileri belirtilen çıkış dosyasına yazar.
+- Çıkış dosyası, korelasyon kurallarının detaylı bir dokümantasyonunu içerir.
