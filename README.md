@@ -26,3 +26,11 @@
 2. **Gerekli Kütüphaneleri Yükleyin:**
    ```bash
    pip install lxml networkx pydot
+
+### Graphviz'i Kurun:
+
+- **Windows:** [Graphviz İndir](https://graphviz.org/download/)
+- **Linux:**
+  ```bash
+  sudo apt-get install graphviz
+
