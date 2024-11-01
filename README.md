@@ -27,10 +27,27 @@
    ```bash
    pip install lxml networkx pydot
 
-### Graphviz'i Kurun:
+3. **Graphviz'i Kurun:**
 
-- **Windows:** [Graphviz İndir](https://graphviz.org/download/)
-- **Linux:**
-  ```bash
-  sudo apt-get install graphviz
+   - **Windows:** [Graphviz İndir](https://graphviz.org/download/)
+   - **Linux:**
+     ```bash
+     sudo apt-get install graphviz
+     ```
+   - **macOS:**
+     ```python
+     brew install graphviz
+     ```
 
+### Betiği Çalıştırma
+
+1. **Betiği İndirin veya Kopyalayın:**
+   - Betiği bir `.py` dosyasına kaydedin, örneğin `esm2markdown.py`.
+
+2. **Korelasyon Kuralı XML Dosyasını Hazırlayın:**
+   - McAfee ESM'den korelasyon kurallarınızı XML formatında dışa aktarın.
+
+3. **Betiği Çalıştırın:**
+   ```python
+   python esm2markdown.py <kural_xml_dosyası> <çıkış_dosyası>
+   ```
